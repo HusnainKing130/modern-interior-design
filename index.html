@@ -1,0 +1,3001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JAMA Header</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+}
+
+/* HEADER */
+header {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.8s ease;
+}
+
+/* LOGO */
+.logo1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-box1 {
+    background: green;
+    color: white;
+    padding: 8px 14px;
+    font-weight: bold;
+    border-radius: 6px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.logo-box1:hover {
+    transform: scale(1.1);
+}
+
+.logo-text1 {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.logo-text1 span {
+    font-weight: normal;
+    font-size: 14px;
+    display: block;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    font-weight: bold;
+    position: relative;
+    transition: 0.3s;
+}
+
+/* underline animation */
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 3px;
+    background: green;
+    left: 0;
+    bottom: -6px;
+    transition: 0.4s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+nav a:hover {
+    color: green;
+}
+
+/* BUTTONS */
+.actions1 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.signup {
+    background: yellow;
+    color: red;
+    padding: 8px 18px;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.signup:hover {
+    transform: scale(1.1);
+}
+
+.login {
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.login:hover {
+    color: green;
+}
+
+/* HAMBURGER */
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* MOBILE */
+@media(max-width: 900px) {
+    nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px 0;
+        transform: translateY(-200%);
+        transition: 0.5s;
+    }
+
+    nav.active {
+        transform: translateY(0);
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .actions1 {
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* HERO SECTION */
+.hero1{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px;
+    position:relative;
+    overflow:hidden;
+}
+
+/* LEFT BACKGROUND BLOCK */
+.hero1::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    width:60%;
+    height:100%;
+    background:#1b6f6a; /* teal */
+    z-index:-1;
+}
+
+.highlight1{
+    color: #ffc107;
+}
+
+/* CONTENT */
+.hero-content1{
+    width:50%;
+    color:white;
+    animation: fadeLeft 1s ease;
+}
+
+.hero-content1 h4{
+    color: #ffc107;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+.hero-content1 h1{
+    font-size:42px;
+    font-weight:900;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.hero-content1 p{
+    color:#ddd;
+    margin-bottom:25px;
+    line-height:1.6;
+}
+
+/* BUTTON */
+.btn1{
+    background:#ff9800;
+    color:#000;
+    padding:12px 22px;
+    text-decoration:none;
+    font-weight:bold;
+    border-radius:4px;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn1:hover{
+    transform:scale(1.1);
+}
+
+/* IMAGE BOX */
+.hero-img1{
+    width:45%;
+    position:relative;
+    animation: fadeRight 1s ease;
+}
+
+.hero-img1 img{
+    width:100%;
+    border-radius:6px;
+}
+
+/* SMALL BUTTON ON IMAGE */
+.image-btn1{
+    position:absolute;
+    bottom:20px;
+    right:20px;
+    background:#ff9800;
+    padding:10px 14px;
+    font-size:14px;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+/* CIRCLE ICON */
+.circle1{
+    display:inline-block;
+    width:25px;
+    height:25px;
+    background:#ff9800;
+    border-radius:50%;
+    margin-left:8px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeLeft{
+    from{opacity:0; transform:translateX(-50px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeRight{
+    from{opacity:0; transform:translateX(50px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+/* FLOAT ANIMATION */
+.hero-img1 img{
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-15px);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .hero1{
+        flex-direction:column;
+        padding:40px 20px;
+        text-align:center;
+    }
+
+    .hero1::before{
+        width:100%;
+        height:55%;
+    }
+
+    .hero-content1{
+        width:100%;
+    }
+
+    .hero-img1{
+        width:100%;
+        margin-top:30px;
+    }
+
+    .image-btn1{
+        right:10px;
+        bottom:10px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.section2{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px;
+    gap:40px;
+}
+
+/* LEFT IMAGES */
+.gallery2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+    width:50%;
+    animation: fadeLeft 1s ease;
+}
+
+.gallery2 img{
+    width:100%;
+    border-radius:6px;
+    object-fit:cover;
+    transition:0.4s;
+}
+
+/* BIG IMAGE */
+.gallery2 img:first-child{
+    grid-row: span 2;
+    height:100%;
+}
+
+/* HOVER EFFECT */
+.gallery2 img:hover{
+    transform:scale(1.05);
+}
+
+/* CARD TEXT */
+.card2{
+    background:#fff;
+    padding:20px;
+    border-radius:6px;
+    margin-top:-60px;
+    margin-left:20px;
+    width:80%;
+    box-shadow:0 10px 25px rgba(0,0,0,0.1);
+    animation: fadeUp 1.2s ease;
+}
+
+.card2 p{
+    font-size:14px;
+    margin-bottom:10px;
+    color:#555;
+}
+
+.stars2{
+    color:orange;
+    font-size:14px;
+}
+
+/* RIGHT CONTENT */
+.content2{
+    width:45%;
+    animation: fadeRight 1s ease;
+}
+
+.content2 h2{
+    font-size:34px;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.content2 h2 span{
+    color:#1b6f6a;
+}
+
+.content2 p{
+    color:#666;
+    line-height:1.6;
+    margin-bottom:20px;
+}
+
+/* BUTTON */
+.btn2{
+    background:#ff9800;
+    padding:12px 22px;
+    font-weight:bold;
+    text-decoration:none;
+    color:#000;
+    border-radius:4px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:0.3s;
+}
+
+.btn2:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* ANIMATIONS */
+@keyframes fadeLeft{
+    from{opacity:0; transform:translateX(-60px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeRight{
+    from{opacity:0; transform:translateX(60px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(40px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .section2{
+        flex-direction:column;
+        padding:40px 20px;
+    }
+
+    .gallery2{
+        width:100%;
+    }
+
+    .content2{
+        width:100%;
+        text-align:center;
+    }
+
+    .card2{
+        margin:20px auto 0;
+        width:90%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+.projects3{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:80px;
+    gap:40px;
+    overflow:hidden;
+}
+
+/* LEFT CONTENT */
+.left3{
+    width:40%;
+    animation: fadeLeft 1s ease;
+}
+
+.left3 h2{
+    font-size:32px;
+    font-weight:900;
+    margin-bottom:15px;
+}
+
+.left3 h2 span{
+    color:#1b6f6a;
+}
+
+.left3 p{
+    color:#666;
+    margin-bottom:20px;
+    line-height:1.6;
+}
+
+/* BUTTON */
+.btn3{
+    background:#ff9800;
+    color:#000;
+    padding:12px 22px;
+    font-weight:bold;
+    border-radius:4px;
+    text-decoration:none;
+    display:inline-block;
+    transition:0.3s;
+}
+
+.btn3:hover{
+    transform:scale(1.1);
+}
+
+/* RIGHT SLIDER */
+.slider3{
+    width:55%;
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+/* CARDS */
+.card3{
+    position:relative;
+    width:200px;
+    height:280px;
+    border-radius:6px;
+    overflow:hidden;
+    flex-shrink:0;
+    transition:0.5s;
+}
+
+.card3 img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* OVERLAY TEXT */
+.card3 .overlay3{
+    position:absolute;
+    bottom:20px;
+    left:15px;
+    color:#fff;
+    font-weight:bold;
+}
+
+/* ACTIVE CARD */
+.card3.active3{
+    transform:scale(1.1);
+    z-index:2;
+}
+
+/* SLIDER LINE */
+.slider3-line{
+    position:absolute;
+    bottom:-30px;
+    left:0;
+    width:100%;
+    height:3px;
+    background:#ddd;
+}
+
+.slider3-line span{
+    display:block;
+    width:33%;
+    height:100%;
+    background:#ff9800;
+    transition:0.5s;
+}
+
+/* PAGINATION */
+.pagination3{
+    position:absolute;
+    bottom:-55px;
+    right:0;
+    font-size:14px;
+}
+
+/* ANIMATIONS */
+@keyframes fadeLeft{
+    from{opacity:0; transform:translateX(-50px);}
+    to{opacity:1; transform:translateX(0);}
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .projects3{
+        flex-direction:column;
+        padding:40px 20px;
+    }
+
+    .left3, .slider3 {
+        width:100%;
+        text-align:center;
+    }
+
+    .slider3{
+        justify-content:center;
+    }
+
+    .pagination3{
+        position:static;
+        margin-top:20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container4 {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Left Side Styles */
+.main-image-container4 {
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.main-image {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.main-image:hover {
+    transform: scale(1.05);
+}
+
+.steps-bar {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    padding: 10px;
+}
+
+.step4 {
+    text-align: center;
+    color: #000;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.step4 i {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+}
+
+.step4 span {
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.step.active {
+    color: #000;
+}
+
+.step.active i {
+    background-color: #006666; /* Gold color from image */
+    color: white;
+    border-color: #f1b44c;
+    box-shadow: 0 5px 15px rgba(241, 180, 76, 0.4);
+}
+
+/* Right Side Styles */
+.title4 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.highlight4 {
+    color: #006666; /* Teal color from image */
+}
+
+.process-list {
+    list-style: none;
+}
+
+.list-item {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s ease-out;
+}
+
+.list-item.show {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.number {
+    min-width: 35px;
+    height: 35px;
+    background-color: #006666;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.text h3 {
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.text p {
+    font-size: 14px;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+    
+    .title4 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    .steps-bar {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    .step4 {
+        width: 30%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.trending-section5 {
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container5 {
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+/* Header & Controls */
+.header-content {
+    min-width: 250px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: #006666; /* Teal color from image */
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.nav-btn:hover {
+    background: #006666;
+    color: white;
+    border-color: #006666;
+}
+
+.counter {
+    font-size: 14px;
+    color: #666;
+    font-weight: 500;
+}
+
+/* Slider Wrapper */
+.slider-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.product-slider {
+    display: flex;
+    gap: 25px;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Product Card */
+.product-card {
+    min-width: calc(33.33% - 17px);
+    background: white;
+    padding: 15px;
+    transition: transform 0.4s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+}
+
+.img-box {
+    width: 100%;
+    height: 300px;
+    background: #f0f0f0;
+    margin-bottom: 15px;
+    overflow: hidden;
+}
+
+.img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply; /* Makes white background images blend */
+    transition: scale 0.5s ease;
+}
+
+.product-card:hover .img-box img {
+    scale: 1.1;
+}
+
+.info {
+    text-align: center;
+}
+
+.info h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info p {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container5 {
+        flex-direction: column;
+    }
+    .product-card {
+        min-width: calc(50% - 13px);
+    }
+    .header-content {
+        width: 100%;
+    }
+    .controls {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .product-card {
+        min-width: 85%; /* Shows part of the next card */
+    }
+    .title {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.info-section6 {
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.container6 {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.flex-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+/* Left Side Content */
+.text-area {
+    flex: 1;
+    max-width: 500px;
+}
+
+.main-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: #222;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.teal-text {
+    color: #006666;
+}
+
+.description {
+    font-size: 15px;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.learn-more {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+.learn-more i {
+    font-size: 12px;
+}
+
+.learn-more:hover {
+    color: #006666;
+    transform: translateX(5px);
+}
+
+/* Right Side Image & Floating Box */
+.image-area {
+    flex: 1.2;
+    position: relative;
+}
+
+.img-wrapper {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.img-wrapper img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    filter: brightness(0.9);
+}
+
+.floating-box {
+    position: absolute;
+    bottom: -30px;
+    left: -40px;
+    background: white;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border-radius: 4px;
+    animation: floatAnim 4s ease-in-out infinite;
+}
+
+.box-text {
+    font-size: 13px;
+    color: #444;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.box-footer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.step-label {
+    font-size: 12px;
+    font-weight: 700;
+    color: #000;
+}
+
+.progress-line {
+    flex-grow: 1;
+    height: 1px;
+    background: #ddd;
+    position: relative;
+}
+
+.dot {
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 4px solid #000;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* Animations */
+@keyframes floatAnim {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .flex-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .floating-box {
+        position: relative;
+        left: 0;
+        bottom: 20px;
+        margin: 0 auto;
+        width: 90%;
+    }
+    
+    .learn-more {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.testimonial-section {
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header Styles */
+.header {
+    margin-bottom: 50px;
+}
+
+.quote-box {
+    background-color: #f1b44c; /* Orange color from image */
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #006666; /* Teal color */
+}
+
+/* Card Grid */
+.testimonial-grid {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto; /* For mobile swiping */
+    padding-bottom: 20px;
+    scrollbar-width: none; /* Hide scrollbar Firefox */
+}
+
+.testimonial-grid::-webkit-scrollbar {
+    display: none; /* Hide scrollbar Chrome/Safari */
+}
+
+/* Individual Card */
+.testimonial-card {
+    background: white;
+    min-width: 350px;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    border-left: 2px solid #ddd;
+    transition: all 0.4s ease;
+    cursor: default;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.testimonial-card:hover {
+    border-left-color: #006666;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.feedback {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.8;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Same as image */
+    transition: 0.3s;
+}
+
+.testimonial-card:hover .avatar {
+    filter: grayscale(0%);
+}
+
+.details h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #222;
+}
+
+.details span {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Animations Class */
+.fade-up {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .testimonial-card {
+        min-width: 290px;
+        padding: 25px;
+    }
+    .title {
+        font-size: 26px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION WITH BACKGROUND IMAGE */
+.contact-section{
+  background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url('young.jpg');
+  background-size:cover;
+  background-position:center;
+  padding:80px 8%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+/* CONTAINER */
+.contact-container{
+  width:100%;
+  max-width:1100px;
+  display:flex;
+  gap:40px;
+  flex-wrap:wrap;
+}
+
+/* LEFT TEXT */
+.contact-text{
+  flex:1;
+  color:#fff;
+  animation:fadeUp 1s ease forwards;
+}
+
+.contact-text h2{
+  font-size:36px;
+  margin-bottom:10px;
+}
+
+.contact-text p{
+  color:#ccc;
+  margin-bottom:25px;
+}
+
+.info{
+  margin-bottom:15px;
+  transition:0.3s;
+}
+
+.info:hover{
+  transform:translateX(10px);
+  color:#00c6ff;
+}
+
+/* FORM */
+.contact-form{
+  flex:1;
+  backdrop-filter: blur(20px);
+  background: rgba(255,255,255,0.08);
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.4);
+  animation:zoomIn 1s ease forwards;
+}
+
+/* INPUT */
+.input-box{
+  position:relative;
+  margin-bottom:25px;
+}
+
+.input-box input,
+.input-box textarea{
+  width:100%;
+  padding:12px;
+  background:transparent;
+  border:none;
+  border-bottom:2px solid #aaa;
+  color:#fff;
+  outline:none;
+}
+
+.input-box label{
+  position:absolute;
+  top:12px;
+  left:0;
+  color:#aaa;
+  transition:0.3s;
+}
+
+/* FLOATING LABEL */
+.input-box input:focus + label,
+.input-box input:valid + label,
+.input-box textarea:focus + label,
+.input-box textarea:valid + label{
+  top:-10px;
+  font-size:12px;
+  color:#00c6ff;
+}
+
+/* BUTTON */
+.btn{
+  width:100%;
+  padding:12px;
+  border:none;
+  border-radius:30px;
+  background:linear-gradient(45deg,#00c6ff,#0072ff);
+  color:#fff;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* ANIMATIONS */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes zoomIn{
+  from{
+    opacity:0;
+    transform:scale(0.8);
+  }
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .contact-container{
+    flex-direction:column;
+  }
+
+  .contact-text h2{
+    font-size:28px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* FOOTER SECTION */
+.footer-section{
+  padding:60px 8% 30px;
+  background:#0a0a0a;
+  color:#fff;
+}
+
+/* TOP CONTENT */
+.footer-top{
+  display:flex;
+  justify-content:space-between;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.footer-box{
+  flex:1;
+  min-width:250px;
+  animation:fadeUp 1s ease forwards;
+}
+
+.footer-box h3{
+  margin-bottom:15px;
+  font-size:20px;
+  position:relative;
+}
+
+.footer-box p{
+  color:#bbb;
+  line-height:1.6;
+  font-size:14px;
+}
+
+/* HOVER EFFECT */
+.footer-box:hover{
+  transform:translateY(-8px);
+  transition:0.3s;
+}
+
+/* ANIMATED LINE */
+.animated-line{
+  margin:40px 0;
+  height:3px;
+  width:100%;
+  background:linear-gradient(90deg,#00c6ff,#0072ff,#00c6ff);
+  background-size:200%;
+  animation:moveLine 3s linear infinite;
+  border-radius:5px;
+}
+
+/* BOTTOM FOOTER */
+.footer-bottom{
+  text-align:center;
+  font-size:14px;
+  color:#aaa;
+  animation:fadeUp 1.2s ease forwards;
+}
+
+/* ANIMATIONS */
+@keyframes moveLine{
+  0%{
+    background-position:0%;
+  }
+  100%{
+    background-position:200%;
+  }
+}
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(30px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  .footer-top{
+    flex-direction:column;
+    text-align:center;
+  }
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<header>
+    <!-- LOGO -->
+    <div class="logo1">
+        <div class="logo-box1">Jama</div>
+        <div class="logo-text1">
+            <strong>Interior</strong>
+            <span></span>
+        </div>
+    </div>
+
+    <!-- NAV -->
+    <nav id="navMenu">
+        <a href="#">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#process">Process</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <!-- ACTIONS -->
+    <div class="actions1">
+        <div class="signup">Sign Up</div>
+        <div class="login">Log In</div>
+    </div>
+
+    <!-- MOBILE MENU -->
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+</header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="hero1">
+
+    <!-- LEFT CONTENT -->
+    <div class="hero-content1">
+        
+
+        <h1>
+            <span class="highlight1">Interio — </span>
+            The Modern <br>
+            Art of Simplicity
+        </h1>
+
+        <p>
+            Step into a world defined by calm elegance. Our designs blend
+            functionality with minimal beauty to create spaces that inspire
+            peace and comfort every day.
+        </p>
+
+        <a href="#" class="btn1">Read More →</a>
+    </div>
+
+    <!-- RIGHT IMAGE -->
+    <div class="hero-img1">
+        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6" alt="">
+        
+        <div class="image-btn1">
+            Watch Video <span class="circle1"></span>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="section2">
+
+    <!-- LEFT SIDE -->
+    <div class="gallery2">
+        <img src="img.jpg" alt="">
+        <img src="decor.jpg" alt="">
+        
+        <!-- CARD -->
+        <div class="card2">
+            <p>
+                This is one of the most beautiful and modern interior
+                concepts designed for comfort and elegance.
+            </p>
+            <div class="stars2">★★★★★</div>
+        </div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="content2">
+        <h2>
+            Welcome for <br>
+            <span>Professionals</span>
+        </h2>
+
+        <p>
+            Discover curated interior design solutions crafted for modern living.
+            Our designs focus on simplicity, elegance, and functionality to
+            transform your spaces into something extraordinary.
+        </p>
+
+        <a href="#" class="btn2">
+            Read More →
+        </a>
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="projects3" id="projects">
+
+    <!-- LEFT -->
+    <div class="left3">
+        <h2>900+ Projects All <br><span>Over the World</span></h2>
+
+        <p>
+            Explore our diverse portfolio of stunning interior designs
+            created for homes, offices,<br> and commercial spaces worldwide.“Explore modern home interior designs from around <br>
+            the world, showcasing a blend of cultural aesthetics, minimalist layouts, natural lighting, <br>
+            and luxurious textures. Focus on how different regions incorporate tradition with <br>
+            contemporary living to create elegant and functional spaces.”
+        </p>
+
+        <a href="#" class="btn3">Read More →</a>
+    </div>
+
+    <!-- RIGHT SLIDER -->
+    <div class="slider3">
+
+        <div class="card3 active3">
+            <img src="small.jpg">
+            <div class="overlay3">Cafe Interior</div>
+        </div>
+
+        <div class="card3">
+            <img src="way.jpg">
+            <div class="overlay3">Restaurant</div>
+        </div>
+
+        <div class="card3">
+            <img src="warm.jpg">
+            <div class="overlay3">Kitchen</div>
+        </div>
+
+        <!-- LINE -->
+        <div class="slider3-line">
+            <span id="progress3"></span>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination3" id="pagination3">1 2 3</div>
+
+    </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="process-section" id="process">
+    <div class="container4">
+        <div class="grid-layout">
+            
+            <div class="left-content">
+                <div class="main-image-container4">
+                    <img src="decorl.jpg" alt="Office Interior" class="main-image">
+                </div>
+                
+                <div class="steps-bar">
+                    <div class="step4">
+                        <i class="fa-lightbulb far">💡</i>
+                        <span>Concept</span>
+                    </div>
+                    <div class="step4">
+                        <i class="fa-edit far">📐</i>
+                        <span>Plan</span>
+                    </div>
+                    <div class="step4">
+                        <i class="fa-gem far">⚒️</i>
+                        <span>Design</span>
+                    </div>
+                    <div class="step4">
+                        <i class="fa-tools fas">🧪</i>
+                        <span>Build</span>
+                    </div>
+                    <div class="step4 active">
+                        <i class="fa-rocket fas">🚀</i>
+                        <span>Launch</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-content">
+                <h2 class="title4">Our work process make <br><span class="highlight4">your dream true</span></h2>
+                
+                <ul class="process-list">
+                    <li class="list-item">
+                        <div class="number">1</div>
+                        <div class="text">
+                            <h3>900+ projects all over the world</h3>
+                            <p>We've crafted interiors in cities across the globe – from Europe to Africa.</p>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="number">2</div>
+                        <div class="text">
+                            <h3>Bespoke Design Tailored to You</h3>
+                            <p>Your space. Your style. We design around what matters to you.</p>
+                        </div>
+                    </li>
+                    <li class="list-item">
+                        <div class="number">3</div>
+                        <div class="text">
+                            <h3>From Sketch to Launch, We're With You</h3>
+                            <p>We guide you through every step - simple, smooth, stress-free.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="trending-section5">
+    <div class="container5">
+        <div class="header-content">
+            <h2 class="title">Buy trending <br><span class="highlight">projects</span></h2>
+            
+            <div class="controls">
+                <div class="nav-buttons">
+                    <button id="prevBtn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                    <button id="nextBtn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="counter"><span id="current">1</span> of 10</div>
+            </div>
+        </div>
+
+        <div class="slider-wrapper">
+            <div class="product-slider" id="slider">
+                <div class="product-card">
+                    <div class="img-box">
+                        <img src="lampg.jpg" alt="Gifts Lamp">
+                    </div>
+                    <div class="info">
+                        <h3>Gifts lamp</h3>
+                        <p>£110</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="img-box">
+                        <img src="small.jpg" alt="Modern Bed">
+                    </div>
+                    <div class="info">
+                        <h3>Modern Bed</h3>
+                        <p>£299</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="img-box">
+                        <img src="digital.jpg" alt="Office Table">
+                    </div>
+                    <div class="info">
+                        <h3>Office table</h3>
+                        <p>£350</p>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="img-box">
+                        <img src="img.jpg" alt="Modern Chair">
+                    </div>
+                    <div class="info">
+                        <h3>Modern Chair</h3>
+                        <p>£150</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="info-section6">
+    <div class="container6">
+        <div class="flex-wrapper">
+            
+            <div class="text-area">
+                <h2 class="main-title">Our work process make <br><span class="teal-text">your dream true</span></h2>
+                <p class="description">
+                    From the initial sketches to the final touch, we deliver design 
+                    excellence. We focus on details that make your space unique 
+                    and comfortable for your lifestyle.
+                </p>
+                <a href="#" class="learn-more">
+                    <i class="fas fa-arrow-right"></i> Learn More Info
+                </a>
+            </div>
+
+            <div class="image-area">
+                <div class="img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=1200" alt="Luxury Interior">
+                    
+                    <div class="floating-box">
+                        <p class="box-text">We guide you through every step - simple, smooth, stress-free.</p>
+                        <div class="box-footer">
+                            <span class="step-label">Step One</span>
+                            <div class="progress-line">
+                                <div class="dot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="testimonial-section">
+    <div class="container">
+        <div class="header">
+            <div class="quote-box">
+                <i class="fas fa-quote-left"></i>
+            </div>
+            <h2 class="title">What our clients <br><span class="highlight">are saying</span></h2>
+        </div>
+
+        <div class="testimonial-grid" id="testimonialGrid">
+            <div class="testimonial-card">
+                <p class="feedback">"Their team provided exceptional service and support throughout the entire project. Highly recommended!"</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=1" alt="User" class="avatar">
+                    <div class="details">
+                        <h4>Arjun Sharma</h4>
+                        <span>CEO, Creative Lab</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="feedback">"The quality of work exceeded our expectations. They truly understand modern design and functionality."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=2" alt="User" class="avatar">
+                    <div class="details">
+                        <h4>Priya Patel</h4>
+                        <span>Interior Designer</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <p class="feedback">"Seamless communication and a stress-free process. Our space looks better than we ever imagined."</p>
+                <div class="user-info">
+                    <img src="https://i.pravatar.cc/150?u=3" alt="User" class="avatar">
+                    <div class="details">
+                        <h4>Rohit Verma</h4>
+                        <span>Business Owner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="contact-section" id="contact">
+
+  <div class="contact-container">
+
+    <!-- LEFT SIDE -->
+    <div class="contact-text">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you. Let’s create something amazing together.</p>
+
+      <div class="info">📍 vehari, Burewala, Pakistan</div>
+      <div class="info">📧 info@email.com</div>
+      <div class="info">📞 +92 371 1498130</div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="contact-form">
+      <form id="contactForm">
+
+        <div class="input-box">
+          <input type="text" required>
+          <label>Your Name</label>
+        </div>
+
+        <div class="input-box">
+          <input type="email" required>
+          <label>Your Email</label>
+        </div>
+
+        <div class="input-box">
+          <textarea rows="4" required></textarea>
+          <label>Your Message</label>
+        </div>
+
+        <button class="btn">Send Message</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer-section">
+
+  <!-- TOP -->
+  <div class="footer-top">
+
+    <div class="footer-box">
+      <h3>About Us</h3>
+      <p>We are a creative team delivering modern and high-quality digital solutions worldwide with innovation and passion.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Projects</h3>
+      <p>We have completed hundreds of successful projects across the globe with modern technologies and creative ideas.</p>
+    </div>
+
+    <div class="footer-box">
+      <h3>Process</h3>
+      <p>Our process is simple and effective from idea to execution ensuring quality and customer satisfaction.</p>
+    </div>
+
+  </div>
+
+  <!-- ANIMATED LINE -->
+  <div class="animated-line"></div>
+
+  <!-- BOTTOM -->
+  <div class="footer-bottom">
+    © 2026 All Rights Reserved | Your Company
+  </div>
+
+</footer>
+
+
+
+
+
+
+<script>
+function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("active");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// simple scroll animation trigger
+window.addEventListener("scroll", () => {
+    document.querySelector(".hero-content").style.opacity = "1";
+});
+
+
+
+
+
+
+
+
+
+
+
+
+// simple reveal on scroll
+window.addEventListener("scroll", () => {
+    document.querySelectorAll(".gallery img, .content, .card")
+    .forEach(el => {
+        el.style.opacity = "1";
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const cards3 = document.querySelectorAll(".card3");
+const progress3 = document.getElementById("progress3");
+let index = 0;
+
+function showSlide(i){
+    cards3.forEach(c => c.classList.remove("active"));
+    cards3[i].classList.add("active");
+
+    progress3.style.width = ((i+1) * 33.33) + "%";
+}
+
+setInterval(()=>{
+    index++;
+    if(index >= cards.length) index = 0;
+    showSlide(index);
+}, 3000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Animation when scrolling into view
+document.addEventListener('DOMContentLoaded', () => {
+    const listItems = document.querySelectorAll('.list-item');
+    
+    const observerOptions = {
+        threshold: 0.2
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('show');
+            }
+        });
+    }, observerOptions);
+
+    listItems.forEach(item => {
+        observer.observe(item);
+    });
+
+    // Step interaction
+    const steps = document.querySelectorAll('.step');
+    steps.forEach(step => {
+        step.addEventListener('click', function() {
+            steps.forEach(s => s.classList.remove('active'));
+            this.classList.add('active');
+        });
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('slider');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const currentText = document.getElementById('current');
+    
+    let currentIndex = 0;
+    const totalItems = 10; // Total count as per image
+
+    function updateSlider() {
+        const cardWidth = document.querySelector('.product-card').offsetWidth + 25;
+        slider.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        
+        // Update counter (Looping between 1-10)
+        currentText.innerText = (currentIndex % totalItems) + 1;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        // Simple logic for example: 4 cards total in HTML
+        if (currentIndex < 3) { 
+            currentIndex++;
+        } else {
+            currentIndex = 0; // Loop back
+        }
+        updateSlider();
+    });
+
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex--;
+        } else {
+            currentIndex = 3;
+        }
+        updateSlider();
+    });
+
+    // Handle window resize to keep slider position correct
+    window.addEventListener('resize', updateSlider);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Intersection Observer for Entrance Animation
+document.addEventListener('DOMContentLoaded', () => {
+    const textArea = document.querySelector('.text-area');
+    const imageArea = document.querySelector('.image-area');
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+            }
+        });
+    }, { threshold: 0.1 });
+
+    // Initial State
+    [textArea, imageArea].forEach(el => {
+        el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'all 0.8s ease-out';
+        observer.observe(el);
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.testimonial-card');
+
+    // Scroll animation using Intersection Observer
+    const observerOptions = {
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+                // Delay for a "staggered" effect
+                setTimeout(() => {
+                    entry.target.classList.add('fade-up');
+                }, index * 150); 
+            }
+        });
+    }, observerOptions);
+
+    cards.forEach(card => {
+        observer.observe(card);
+    });
+
+    // Horizontal drag scroll for desktop mouse users
+    const slider = document.getElementById('testimonialGrid');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+    slider.addEventListener('mouseleave', () => { isDown = false; });
+    slider.addEventListener('mouseup', () => { isDown = false; });
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SUCCESS MESSAGE ANIMATION
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+  e.preventDefault();
+
+  form.innerHTML = `
+    <h2 style="color:#fff;text-align:center;animation:fadeUp 0.6s ease;">
+      ✅ Message Sent Successfully
+    </h2>
+  `;
+});
+
+// SCROLL REVEAL
+const elements = document.querySelectorAll(".contact-text, .contact-form");
+
+window.addEventListener("scroll", () => {
+  elements.forEach(el => {
+    let pos = el.getBoundingClientRect().top;
+    let screen = window.innerHeight;
+
+    if(pos < screen - 100){
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// SCROLL REVEAL ANIMATION
+const boxes = document.querySelectorAll(".footer-box, .footer-bottom");
+
+window.addEventListener("scroll", () => {
+  boxes.forEach(el => {
+    let pos = el.getBoundingClientRect().top;
+    let screen = window.innerHeight;
+
+    if(pos < screen - 100){
+      el.style.opacity = "1";
+      el.style.transform = "translateY(0)";
+    }
+  });
+});
+
+// HOVER GLOW EFFECT
+document.querySelectorAll(".footer-box").forEach(box => {
+  box.addEventListener("mouseover", () => {
+    box.style.boxShadow = "0 10px 30px rgba(0,198,255,0.3)";
+  });
+
+  box.addEventListener("mouseout", () => {
+    box.style.boxShadow = "none";
+  });
+});
+
+
+
+</script>
+
+</body>
+</html>
